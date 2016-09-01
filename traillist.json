@@ -1,0 +1,34 @@
+{
+    "trailList": [
+        {
+            "TrailARN": "arn:aws:cloudtrail:us-east-1:411815166437:trail/Default",
+            "SnsTopicName": "reantrainee-cloudtrail",
+            "S3BucketName": "reantrainee-cloudtrail",
+            "LogFileValidationEnabled": true,
+            "CloudWatchLogsLogGroupArn": "arn:aws:logs:us-east-1:411815166437:log-group:CloudTrailLogs:*",
+            "Name": "Default",
+            "HomeRegion": "us-east-1",
+            "CloudWatchLogsRoleArn": "arn:aws:iam::411815166437:role/CloudTrail_CloudWatchLogs_Role",
+            "IsMultiRegionTrail": true,
+            "IncludeGlobalServiceEvents": true
+        },
+        {
+            "IncludeGlobalServiceEvents": true,
+            "S3BucketName": "swartztest-cloudtrail",
+            "LogFileValidationEnabled": false,
+            "Name": "swartztest-cloudtrail",
+            "TrailARN": "arn:aws:cloudtrail:us-east-1:411815166437:trail/swartztest-cloudtrail",
+            "IsMultiRegionTrail": false,
+            "HomeRegion": "us-east-1"
+        },
+        {
+            "IncludeGlobalServiceEvents": true,
+            "S3BucketName": "reantrainee-cloudtrail",
+            "LogFileValidationEnabled": true,
+            "Name": "ttt",
+            "TrailARN": "arn:aws:cloudtrail:us-west-2:411815166437:trail/ttt",
+            "IsMultiRegionTrail": true,
+            "HomeRegion": "us-west-2"
+        }
+    ]
+}
