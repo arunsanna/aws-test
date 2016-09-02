@@ -11,6 +11,7 @@ max_score=8
 cat_total=
 percent=0
 
+rm test.csv
 #generate the cloudtrail list and save it into a  json.
 aws cloudtrail describe-trails > traillist.json &&
 
@@ -103,12 +104,13 @@ cat_total=$(($cis_2_1+$cis_2_2+$cis_2_3+$cis_2_4+$cis_2_5+$cis_2_6+$cis_2_7+$cis
 #echo 'section max='$max_score
 
 #generation of csv file with results
-echo '"control_name","category","subcategory","description","status","max","total"' > test.csv
-echo '"cis_2_1","cloud_trail","ensure cloudtrail enabled in all regions",'$cis_2_1','$max_score','$cat_total'' >> test.csv
-echo '"cis_2_2","cloudtrail", "ensure cloud trail logfile validation is enabled",'$cis_2_2','$max_score','$cat_total'' >> test.csv
-echo '"cis_2_3","s3", "ensure s3 bucket cloudtrail logs is not publicaly accesible",'$cis_2_3','$max_score','$cat_total'' >> test.csv
-echo '"cis_2_4","cloud_trail", "Ensure CloudTrail logs are integrated with cloud watch logs",'$cis_2_4','$max_score','$cat_total'' >> test.csv
-echo '"cis_2_5","log", "Ensure AWS Config is enabled in all regions",'$cis_2_5','$max_score','$cat_total'' >> test.csv
-echo '"cis_2_6","s3", "Ensure s3 bucket access logging is enabled on cloudtrail s3 bucket",'$cis_2_6','$max_score','$cat_total'' >> test.csv
-echo '"cis_2_7","encryption","Ensure Cloud trail logs are encrypted at rest using KMS CMKs",'$cis_2_7','$max_score','$cat_total'' >> test.csv
-echo '"cis_2_8","encryption","Ensure rotation for cutomer created CMKs is enabled",'$cis_2_8','$max_score','$cat_total'' >> test.csv
+#echo '"control_name","category","subcategory","description","status","max","total"' > test.csv
+echo "'cis_2_1','logging','cloud_trail','ensure cloudtrail enabled in all regions',$cis_2_1,$max_score,$cat_total" >> test.csv
+echo "'cis_2_2','logging','cloudtrail','ensure cloud trail logfile validation is enabled',$cis_2_2,$max_score,$cat_total" >> test.csv
+echo "'cis_2_3','logging','s3','ensure s3 bucket cloudtrail logs is not publicaly accesible',$cis_2_3,$max_score,$cat_total" >> test.csv
+echo "'cis_2_4','logging','cloud_trail','Ensure CloudTrail logs are integrated with cloud watch logs',$cis_2_4,$max_score,$cat_total" >> test.csv
+echo "'cis_2_5','logging','log','Ensure AWS Config is enabled in all regions',$cis_2_5,$max_score,$cat_total" >> test.csv
+echo "'cis_2_6','logging','s3','Ensure s3 bucket access logging is enabled on cloudtrail s3 bucket',$cis_2_6,$max_score,$cat_total" >> test.csv
+echo "'cis_2_7','logging','encryption','Ensure Cloud trail logs are encrypted at rest using KMS CMKs',$cis_2_7,$max_score,$cat_total" >> test.csv
+echo "'cis_2_8','logging','encryption','Ensure rotation for customer created CMKs is enabled',$cis_2_8,$max_score,$cat_total" >> test.csv
+cat test.csv

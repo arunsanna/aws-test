@@ -1,34 +1,34 @@
 {
     "trailList": [
         {
-            "TrailARN": "arn:aws:cloudtrail:us-east-1:411815166437:trail/Default",
             "SnsTopicName": "reantrainee-cloudtrail",
-            "S3BucketName": "reantrainee-cloudtrail",
-            "LogFileValidationEnabled": true,
+            "IncludeGlobalServiceEvents": true,
             "CloudWatchLogsLogGroupArn": "arn:aws:logs:us-east-1:411815166437:log-group:CloudTrailLogs:*",
-            "Name": "Default",
             "HomeRegion": "us-east-1",
-            "CloudWatchLogsRoleArn": "arn:aws:iam::411815166437:role/CloudTrail_CloudWatchLogs_Role",
             "IsMultiRegionTrail": true,
-            "IncludeGlobalServiceEvents": true
-        },
-        {
-            "IncludeGlobalServiceEvents": true,
-            "S3BucketName": "swartztest-cloudtrail",
-            "LogFileValidationEnabled": false,
-            "Name": "swartztest-cloudtrail",
-            "TrailARN": "arn:aws:cloudtrail:us-east-1:411815166437:trail/swartztest-cloudtrail",
-            "IsMultiRegionTrail": false,
-            "HomeRegion": "us-east-1"
-        },
-        {
-            "IncludeGlobalServiceEvents": true,
+            "Name": "Default",
             "S3BucketName": "reantrainee-cloudtrail",
             "LogFileValidationEnabled": true,
-            "Name": "ttt",
-            "TrailARN": "arn:aws:cloudtrail:us-west-2:411815166437:trail/ttt",
+            "CloudWatchLogsRoleArn": "arn:aws:iam::411815166437:role/CloudTrail_CloudWatchLogs_Role",
+            "TrailARN": "arn:aws:cloudtrail:us-east-1:411815166437:trail/Default"
+        },
+        {
+            "LogFileValidationEnabled": false,
+            "IncludeGlobalServiceEvents": true,
+            "HomeRegion": "us-east-1",
+            "IsMultiRegionTrail": false,
+            "Name": "swartztest-cloudtrail",
+            "S3BucketName": "swartztest-cloudtrail",
+            "TrailARN": "arn:aws:cloudtrail:us-east-1:411815166437:trail/swartztest-cloudtrail"
+        },
+        {
+            "LogFileValidationEnabled": true,
+            "IncludeGlobalServiceEvents": true,
+            "HomeRegion": "us-west-2",
             "IsMultiRegionTrail": true,
-            "HomeRegion": "us-west-2"
+            "Name": "ttt",
+            "S3BucketName": "reantrainee-cloudtrail",
+            "TrailARN": "arn:aws:cloudtrail:us-west-2:411815166437:trail/ttt"
         }
     ]
 }

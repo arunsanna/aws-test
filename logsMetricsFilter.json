@@ -1,0 +1,52 @@
+{
+    "metricFilters": [
+        {
+            "creationTime": 1472590497180,
+            "metricTransformations": [
+                {
+                    "metricNamespace": "CloudTrailMetric",
+                    "metricName": "AccessDeniedErrors",
+                    "metricValue": "1"
+                }
+            ],
+            "filterPattern": "{ ($.errorCode = \"*UnauthorizedOperation\") || ($.errorCode = \"AccessDenied*\") }",
+            "filterName": "CloudTrailMetricFilter"
+        },
+        {
+            "creationTime": 1472774232515,
+            "metricTransformations": [
+                {
+                    "metricNamespace": "IAMPolicyChange",
+                    "metricName": "IAMPolicyChange",
+                    "metricValue": "1"
+                }
+            ],
+            "filterPattern": "{($.eventName=DeleteGroupPolicy)||($.eventName=DeleteRolePolicy)||($.eventName=DeleteUserPolicy)||($.eventName=PutGroupPolicy)||($.eventName=PutRolePolicy)||($.eventName=PutUserPolicy)||($.eventName=CreatePolicy)||($.eventName=DeletePolicy)||($.eventName=CreatePolicyVersion)||($.eventName=DeletePolicyVersion)||($.eventName=AttachRolePolicy)||($.eventName=DetachRolePolicy)||($.eventName=AttachUserPolicy)||($.eventName=DetachUserPolicy)||($.eventName=AttachGroupPolicy)||($.eventName=DetachGroupPolicy)}",
+            "filterName": "IAMPolicyFilter"
+        },
+        {
+            "creationTime": 1472749562303,
+            "metricTransformations": [
+                {
+                    "metricNamespace": "WithoutMFA",
+                    "metricName": "WithoutMFAsignin",
+                    "metricValue": "1"
+                }
+            ],
+            "filterPattern": "{ $.userIdentity.sessionContext.attributes.mfaAuthenticated != \"true\" }",
+            "filterName": "MFAFilter"
+        },
+        {
+            "creationTime": 1472772806888,
+            "metricTransformations": [
+                {
+                    "metricNamespace": "RootAccountUsage",
+                    "metricName": "RootUsage",
+                    "metricValue": "1"
+                }
+            ],
+            "filterPattern": "{ $.userIdentity.type = \"Root\" && $.userIdentity.invokedBy NOT EXISTS && $.eventType != \"AwsServiceEvent\" }",
+            "filterName": "RootUsageFilter"
+        }
+    ]
+}

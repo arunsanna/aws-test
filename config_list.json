@@ -1,0 +1,16 @@
+{ "Region": "us-east-1", "Recorder": true }
+{ "Region": "us-west-2", "Recorder": true }
+{ "Region": "us-west-1", "Recorder": false }
+{ "Region": "eu-west-1", "Recorder": false }
+{ "Region": "eu-central-1", "Recorder": false }
+{ "Region": "ap-southeast-1", "Recorder": false }
+{ "Region": "ap-northeast-1", "Recorder": false }
+{ "Region": "ap-southeast-2", "Recorder": false }
+{ "Region": "ap-northeast-2", "Recorder": false }
+{ "Region": "ap-south-1", "Recorder": false }
+{ "Region": "sa-east-1", "Recorder": false }
+{ "Region": "us-east-1", "Recorder": true }
+{ "Region": "us-west-2", "Recorder": true }
+{ "Region": "us-west-1", "Recorder": false }
+{ "Region": "eu-west-1", "Recorder": false }
+{ "Region": "eu-central-1", "Recorder": false }

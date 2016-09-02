@@ -1,0 +1,11 @@
+cis_2_5,'us-east-1',true
+cis_2_5,'us-west-2',true
+cis_2_5,'us-west-1',false
+cis_2_5,'eu-west-1',false
+cis_2_5,'eu-central-1',false
+cis_2_5,'ap-southeast-1',false
+cis_2_5,'ap-northeast-1',false
+cis_2_5,'ap-southeast-2',false
+cis_2_5,'ap-northeast-2',false
+cis_2_5,'ap-south-1',false
+cis_2_5,'sa-east-1',false
